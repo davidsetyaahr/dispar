@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />    
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>    
+    <div id="progress">
+        <div id="bar"></div>
+    </div>
+    <div class="info">
+        <ul>
+            <li data-placement='right' data-toggle="tooltip" title="Toilet"><span class="fa fa-toilet"></span></li>
+            <li data-placement='right' data-toggle="tooltip" title="Pintu Registrasi"><span class="fa fa-door-open"></span></li>
+            <li data-placement='right' data-toggle="tooltip" title="Toko Makanan"><span class="fa fa-store-alt"></span></li>
+        </ul>
+    </div>
+    <div class="destination">
+        Kawah Ijen
+    </div>
+    <div class="bottom">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    
+    <script type="text/javascript" src="https://rawgit.com/mrdoob/three.js/dev/build/three.min.js"></script>
+    <script type="text/javascript"
+    src="https://rawgit.com/pchen66/panolens.js/master/build/panolens.min.js"></script>    
+    <script src="assets/js/custom.js"></script>
+    <script>
+        var destinations = [
+            {
+                "name" : "Kawah Ijen",
+                "src" : "http://127.0.0.1:5500/assets/img/2.png",
+            },
+            {
+                "name" : "Kawah Wurung",
+                "src" : "http://127.0.0.1:5500/assets/img/1.png",
+            },
+            {
+                "name" : "Kawah Ijen",
+                "src" : "http://127.0.0.1:5500/assets/img/2.png",
+            },
+        ];
+        $.each(destinations,function(i,item){
+            $(".bottom").append(`
+                <div class="box" id='${i}'>
+                    <div class="name">
+                        <span>${item.name}</span>
+                    </div>
+                    <img src="${item.src}">
+                </div>
+            `);
+        })
+
+        var viewer, container, infospot;
+        container = document.getElementById('container')
+        var bar = document.querySelector( '#bar' );
+
+        function onProgressUpdate ( event ) {
+            var percentage = event.progress.loaded/ event.progress.total * 100;
+            bar.style.width = percentage + "%";
+            if (percentage >= 100){
+                bar.classList.add( 'hide' );
+                setTimeout(function(){
+                bar.style.width = 0;
+                }, 1000);
+            }
+        }
+        viewer = new PANOLENS.Viewer( { container: container, output: 'console' });
+        var panorama = [];
+        var infospot = []
+        $(".box").each(function(){
+            var id = $(this).attr('id')
+            var src = $(".box#"+id+" img").attr('src')
+            panorama[id] = new PANOLENS.ImagePanorama(src);
+            panorama[id].addEventListener( 'progress', onProgressUpdate );
+            
+            infospot[id] = new PANOLENS.Infospot( 350, "https://images-na.ssl-images-amazon.com/images/I/61mtx+420hL._AC_US436_QL65_.jpg" );
+            infospot[id].position.set( 0, -2000, -5000 );
+            infospot[id].addHoverText('Testing')
+            panorama[id].add( infospot[id] );
+
+            viewer.add( panorama[id]);
+        })
+
+
+        $(".box").click(function(){
+            var id = $(this).attr('id')
+            var name = $(".box#"+id+" .name").html()
+            bar.classList.remove( 'hide' );
+            viewer.setPanorama(panorama[id]);
+            $(".destination").html(name)
+            $(".destination").fadeIn()
+            $(".box").removeClass('active')
+            $(this).addClass('active')
+        })
+
+    </script>    
+</body>
+</html>
