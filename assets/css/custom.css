@@ -212,15 +212,17 @@ html {
 .map{
   position: relative;
 }
-.map .img-pin{
-  position: absolute;
+.map a img{
   width : 100px;
+}
+.map a{
+  position: absolute;
   transition: all.5s ease;
   -webkit-transition: all.5s ease;
   -moz-transition: all.5s ease;
   -o-transition: all.5s ease;
 }
-.map .img-pin:hover{
+.map a:hover{
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
