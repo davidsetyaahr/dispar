@@ -15,7 +15,7 @@ const destinations = [
         "position" : "left:65%;top:20%",
     }
  */
-    {
+/*     {
         "name" : "Coffee Plantation",
         "pinImg" : "Arak-Arak.png",
         "position" : "left:65%;top:20%",
@@ -180,7 +180,7 @@ const destinations = [
         ],
         "web360" : "kalipait/index.htm",
         "rute" : "Rute dari Alun Alun Bondowoso, Kauman, Kotakulon, Kabupaten Bondowoso, Jawa Timur ke Kalipait Sulphur Water Fall, Curah Macan, Kalianyar, Kabupaten Bondowoso, Jawa .kml"
-    },
+    }, */
     {
         "name" : "Kawah Wurung Tour",
         "pinImg" : "Arak-Arak.png",
@@ -194,8 +194,7 @@ const destinations = [
             Di sekitar kawasan Geosite Kawah Wurung terdapat Gunung Api Intra Kaldera ljen yang terdiri atas; Gunung Kawah Wurung, G. Genteng, G. Pendil, G. Pendtan, dan G. Anyar.
 
             Geosite Kawah Wurung mempunyai nilai keunggulan Geologi berupa tampilan Morfologi Gunung Api ‘Teletubbies’ Intra Kaldera. Keragaman satuan batuan penyusun kawasan Geosite ini disebabkan oleh sumber material dari vulkanisme Gunung Api Intra Kaldera maupun Ring Kaldera terdekat, sekaligus berpengaruh terahdap mineral petrografi penyusun batuan.
-
-
+            <div class="mt-3 font-weight-light">
             Wurung Crater Geosite is located between the borders of Jampit and Kalianyar Village,
 
             Ijen Subdistrict, Bondowoso Regency. This Geosite area is formed from complex volcanic
@@ -203,7 +202,7 @@ const destinations = [
             of; Mount Wurung Crater, Mt. Genteng, Mt. Pendil, Mt. Pendian, and Mt. Anyar.
 
             The Geosite considers a geological significance of volcanic morphology ‘Teletubbies' intra caldera.
-            The diversity of Wurung Crater Geosite area is occured from the volcanism material sources of Intra Caldera Volcano and Caldera Ring, and affected as well through Petrographic Mineral of materials construction.`,
+            The diversity of Wurung Crater Geosite area is occured from the volcanism material sources of Intra Caldera Volcano and Caldera Ring, and affected as well through Petrographic Mineral of materials construction.</div>`,
         "img" : ["1.jpg","2.jpg","3.jpg"],
         "facilities" : [
             {
