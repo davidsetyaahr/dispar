@@ -161,6 +161,14 @@ html {
     rgba(0, 0, 0, 0.5) 0%,
     rgba(255, 255, 255, 0) 100%
   );
+  position: fixed;
+  transition: all.3s ease;
+  -webkit-transition: all.3s ease;
+  -o-transition: all.3s ease;
+  -moz-transition: all.3s ease;
+}
+.nav-top.scrolled {
+  background: rgb(0, 0,0,0.8);
 }
 .nav-top li {
   padding: 15px;
@@ -180,6 +188,10 @@ html {
 }
 .btn-green {
   background: #a7cb07;
+  color: white;
+}
+.btn-orange {
+  background: #e7820b;
   color: white;
 }
 .btn-green:hover {
@@ -212,17 +224,15 @@ html {
 .map{
   position: relative;
 }
-.map a img{
-  width : 100px;
-}
-.map a{
+.map .img-pin{
   position: absolute;
+  width : 100px;
   transition: all.5s ease;
   -webkit-transition: all.5s ease;
   -moz-transition: all.5s ease;
   -o-transition: all.5s ease;
 }
-.map a:hover{
+.map .img-pin:hover{
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);

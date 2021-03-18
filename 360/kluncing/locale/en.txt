@@ -1,0 +1,34 @@
+#: locale=en
+
+## Tour
+
+### Description
+
+### Title
+tour.name = Coffee Plantation Kluncing
+
+## Skin
+
+### Button
+Button_3922DB8C_35D0_EDB2_41BD_766F4C979C6E.label = Information
+Button_392E9B8E_35D0_EDCE_41C9_80C49C1EEA93.label = Panorama List
+Button_392F1B8E_35D0_EDCE_41C6_4D62EC2064AF.label = Contact
+Button_392F3B8E_35D0_EDCE_41C0_74E79EC3289A.label = Galery
+Button_392F5B8E_35D0_EDCE_41AC_387771EEABA3.label = Floorplan
+Button_392F7B8E_35D0_EDCE_41B2_8785D3085652.label = Drone Footage
+Button_392F7B8E_35D0_EDCE_41B2_8785D3085652.pressedLabel = Location
+
+### Multiline Text
+HTMLText_39285B8E_35D0_EDCE_41C1_7FE4674A8201.html = <div style="text-align:left; color:#000; "><DIV STYLE="text-align:left;font-size:14px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:14px;font-family:'Oswald Regular';"><I>Company Name</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:14px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:14px;font-family:'Oswald Regular';"><I>www.loremipsum.com</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:14px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:14px;font-family:'Oswald Regular';"><I>info@loremipsum.com</I></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:14px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#ffffff;font-size:14px;font-family:'Oswald Regular';"><I>Tlf.: +11 111 111 111</I></SPAN></SPAN></DIV></div>
+
+## Media
+
+### Title
+panorama_24FB94C7_35D0_1BBE_41B3_43C2573BD296.label = Coffee Plantation
+panorama_274CAC54_35D0_6B52_4187_33D8AD4A8DD3.label = Coffee Plantation
+panorama_3C50CBA4_35D1_EDF2_419B_5A3643A3DC07.label = Cafe Kluncing
+
+## Action
+
+### URL
+PopupWebFrameBehaviour_213071CF_35D0_3D4E_41BD_18BEE0DC87A7.url = //www.youtube.com/embed/5EpSLUjYKYg

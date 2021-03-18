@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light nav-top fixed-top">
+        <div class="container custom">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/common/logo.png" width="150" alt="" srcset="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html"> <i class="fa fa-home"></i> <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="routes.html">Routes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="full-bg" id="destination">
+        <div class="fixed-left">
+            <div class="content">
+                <div class="owl-destination owl-carousel">
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="info-destination mt-5 py-5 px-5" data-aos="fade-left" data-aos-duration="2000">
+                <h1 class="color-white" id="title"></h1>
+                <p class="color-white font-weight-light" id="description"></p>
+                <div class="row row-img">
+                </div>
+                <div class="row align-items-end mt-4">
+                    <div class="col-auto">
+                        <div class="facilities">
+                            <h6 class="color-white">Facilities</h6>
+                            <div class="icon-list">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto ml-auto">
+                        <a href="" id="rute" class="btn btn-rounded py-2 btn-orange px-4 font-weight-bold"><span
+                                class="fa fa-download"></span> Rute Google Earth</a>
+                        <a href="" id="web360" target="_blank"
+                            class="btn btn-rounded py-2 btn-green px-4 font-weight-bold"><span
+                                class="fa fa-street-view"></span> Start 360 Tour</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+        integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/destinations.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            const url = new URLSearchParams(window.location.search);
+            const id = parseInt(url.get('destination')) - 1;
+            $.each(destinations[id].video, function (i, data) {
+                $(".owl-destination").append(`<div class="item">
+                        <div class="video-container">
+                            <video style="width:100%" autoplay="false">
+                                <source src="assets/video/${data}" type="video/mp4">
+                            </video>
+                            <span class="fa fa-play-circle"></span>
+                        </div>
+                    </div>`)
+            })
+            $.each(destinations[id].img, function (i, data) {
+                $(".row-img").append(`<div class="col-md-4">
+                        <div class="img-destination">
+                            <img src="assets/img/destinations/${data}" class="img-fluid" alt="" srcset="">
+                        </div>
+                    </div>`)
+
+            })
+            VanillaTilt.init(document.querySelectorAll(".img-destination"), {
+                glare: true,
+                "max-glare": "0.5",
+                speed: 400,
+                scale: 1.05
+            });
+            $.each(destinations[id].facilities, function (i, data) {
+                $(".icon-list").append(`<div class="icon" data-toggle="tooltip" title="${data.title}">
+                    <span class="${data.icon}"></span>
+                </div>`)
+                $('[data-toggle="tooltip"]').tooltip();
+            })
+
+            $("#title").html(destinations[id].name)
+            $("#description").html(destinations[id].description)
+            $("#web360").attr("href", "360/" + destinations[id].web360)
+            $("#rute").attr("href", "assets/rute/" + destinations[id].rute)
+
+            $(".owl-destination").owlCarousel({
+                items: 1,
+                dots: true,
+                nav: true,
+                navText: ["<span class='fa fa-chevron-circle-left'></span>", "<span class='fa fa-chevron-circle-right'></span>"]
+            });
+            $(".video-container").each(function () {
+                var video = $(this).find("video");
+                var plainVideo = video.get(0);
+                var playBtn = $(this).find("span");
+
+                playBtn.click(function () {
+                    video.get(0).addEventListener('ended', myHandler, false);
+                    plainVideo.play();
+                    playBtn.css("visibility", "hidden");
+
+                    function myHandler(e) {
+                        playBtn.css("visibility", "visible");
+                    }
+                });
+            });
+            var dots = parseInt($(".owl-dots").width())
+            $(".owl-nav button:first-child").css({"margin-right": dots / 2 + 18})
+            $(".owl-nav button:last-child").css({"margin-left": dots / 2 + 18})
+        });
+        AOS.init()
+    </script>
+</body>
+
+</html>
