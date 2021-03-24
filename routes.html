@@ -147,6 +147,8 @@
         })
         plainVideo.addEventListener("click", function () {
             if ($(playBtn).css("visibility") == "visible") {
+                $(".preview-img img").attr('src', '')
+                $(".preview-img").removeClass('show')
                 plainVideo.play();
                 $(playBtn).css("visibility", "hidden");
             }
