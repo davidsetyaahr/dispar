@@ -26,8 +26,8 @@ HTMLText_39285B8E_35D0_EDCE_41C1_7FE4674A8201.html = <div style="text-align:left
 ## Media
 
 ### Title
-panorama_34258AB9_3F8A_35D5_41A8_2C1AE234E24B.label = Kalipait Acidic Stream
 panorama_3679D4A1_3F8A_1DF5_4172_318271093460.label = Kalipait Acidic Stream
+panorama_49ED2FC3_60F2_8BE0_41D5_4E90433AE0B5.label = Kalipait Acidic Stream
 video_30B6B1EC_3A1A_7635_41BD_B02129C9F10D.label = Pesona Bondowoso - Jawa Timur
 
 ## Action

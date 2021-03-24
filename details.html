@@ -45,7 +45,7 @@
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Search</a>
+                        <a class="nav-link" href="search.html">Search</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="routes.html">Routes</a>
@@ -120,6 +120,7 @@
                         </div>
                     </div>`)
             })
+            $("video").attr("autoplay", false)
             $.each(destinations[id].img, function (i, data) {
                 $(".row-img").append(`<div class="col-md-4">
                         <div class="img-destination">
@@ -144,8 +145,14 @@
             $("#title").html(destinations[id].name)
             $("#description").html(destinations[id].description)
             $("#web360").attr("href", "360/" + destinations[id].web360)
-            $("#rute").attr("href", "assets/rute/" + destinations[id].rute)
-
+            //            $("#rute").attr("href", "assets/rute/" + destinations[id].rute)
+            $("#rute").click(function (e) {
+                e.preventDefault()
+                var file = $(this).attr('href');
+                $.each(destinations[id].rute, function (i, data) {
+                    window.open('assets/rute/' + data)
+                })
+            })
             $(".owl-destination").owlCarousel({
                 items: 1,
                 dots: true,
@@ -156,16 +163,20 @@
                 var video = $(this).find("video");
                 var plainVideo = video.get(0);
                 var playBtn = $(this).find("span");
-
-                playBtn.click(function () {
+                $(this).click(function () {
+                    if ($(playBtn).css("visibility") == "visible") {
+                        plainVideo.play();
+                        playBtn.css("visibility", "hidden");
+                    }
+                    else {
+                        plainVideo.pause();
+                        playBtn.css("visibility", "visible");
+                    }
                     video.get(0).addEventListener('ended', myHandler, false);
-                    plainVideo.play();
-                    playBtn.css("visibility", "hidden");
-
                     function myHandler(e) {
                         playBtn.css("visibility", "visible");
                     }
-                });
+                })
             });
             var dots = parseInt($(".owl-dots").width())
             $(".owl-nav button:first-child").css({"margin-right": dots / 2 + 18})
