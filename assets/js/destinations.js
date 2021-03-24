@@ -310,7 +310,7 @@ const destinations = [
     {
         "name" : "Gentongan Waterfall",
         "pinImg" : "9.png",
-        "position" : "left:20%;top:20%",
+        "position" : "left:20%;top:5%",
         "video" : ["gentongan/gentongan.mp4"],
         "description" : `114°10'54.43"E ; 8°01'24.41"S
 
@@ -337,7 +337,7 @@ const destinations = [
     {
         "name" : "Blawan Lava",
         "pinImg" : "10.png",
-        "position" : "left:25%;top:30%",
+        "position" : "left:25%;top:10%",
         "video" : ["blawan-lava/blawan-lava.mp4"],
         "description" : `114 ° 10'15.50'E ; 7 ° 59'22.99"S
 
@@ -450,7 +450,7 @@ const destinations = [
     {
         "name" : "Ijen Crater",
         "pinImg" : "12.png",
-        "position" : "left:39%;top:50%",
+        "position" : "left:32%;top:10%",
         "video" : ["ijen/ijen.mp4"],
         "description" : `114°14'25.53"E ; 8°3'35.64"S
             Geosite Kawah Ijen/ Blue Fire di antara dua Wilayah Administratif Kabupaten Bondowoso
@@ -515,7 +515,7 @@ const destinations = [
     {
         "name" : "Plalangan Lava Flow",
         "pinImg" : "13.png",
-        "position" : "left:12%;top:20%",
+        "position" : "left:12%;top:-10%",
         "video" : ["plalangan-lava/plalangan-lava.mp4"],
         "description" : `114 ° 09'8.25'E ; 8 ° 00'33.97"S
 

@@ -32,6 +32,9 @@
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <div class="video-container">
+                        <div class="preview-img">
+                            <img src="" class="img-fluid" alt="">
+                        </div>
                         <video style="width:100%" autoplay>
                             <source src="" type="video/mp4">
                         </video>
@@ -76,6 +79,7 @@
                 <div class="col-md-11">
                     <div class="owl-routes owl-carousel">
                         <div class="item mx-2">
+                            <h3>Rute 1</h3>
                             <div class="layer">
                                 <video src="assets/video/route.mp4" width="100%">
                                 </video>
@@ -85,15 +89,7 @@
                             </div>
                         </div>
                         <div class="item mx-2">
-                            <div class="layer">
-                                <video src="assets/video/route.mp4" width="100%">
-                                </video>
-                                <div class="icon-play">
-                                    <span class="fa fa-play"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item mx-2">
+                            <h3>Rute 2</h3>
                             <div class="layer">
                                 <video src="assets/video/route.mp4" width="100%">
                                 </video>
@@ -140,10 +136,13 @@
         $(".video-popup .close").click(function () {
             $(".video-popup").removeClass("active")
             $(playBtn).css("visibility", "hidden");
+            plainVideo.pause()
         })
 
         $(playBtn).click(function () {
             $(this).css("visibility", "hidden")
+            $(".preview-img img").attr('src', '')
+            $(".preview-img").removeClass('show')
             plainVideo.play()
         })
         plainVideo.addEventListener("click", function () {
@@ -162,32 +161,33 @@
             if (currentTime != time) {
                 if (currentTime == 93) {
                     this.pause()
-                    alert('solor')
-                    this.play()
+                    $(".preview-img img").attr('src', 'assets/img/info-rute/solor.png')
+                    $(".preview-img").addClass('show')
+                    $(playBtn).css("visibility", "visible");
                 }
                 else if (currentTime == 177) {
                     this.pause()
-                    alert('ijen')
-                    this.play()
-                    //                    $(playBtn).css("visibility", "visible");
+                    $(".preview-img img").attr('src', 'assets/img/info-rute/kawah-ijen.png')
+                    $(".preview-img").addClass('show')
+                    $(playBtn).css("visibility", "visible");
                 }
                 else if (currentTime == 196) {
                     this.pause()
-                    alert('kawah wurung')
-                    this.play()
-                    //                    $(playBtn).css("visibility", "visible");
+                    $(".preview-img img").attr('src', 'assets/img/info-rute/kawah-wurung.png')
+                    $(".preview-img").addClass('show')
+                    $(playBtn).css("visibility", "visible");
                 }
                 else if (currentTime == 230) {
                     this.pause()
-                    alert('blawan')
-                    this.play()
-                    //                    $(playBtn).css("visibility", "visible");
+                    $(".preview-img img").attr('src', 'assets/img/info-rute/blawan.png')
+                    $(".preview-img").addClass('show')
+                    $(playBtn).css("visibility", "visible");
                 }
                 else if (currentTime == 268) {
                     this.pause()
-                    alert('maskuning')
-                    this.play()
-                    //                    $(playBtn).css("visibility", "visible");
+                    $(".preview-img img").attr('src', 'assets/img/info-rute/maskuning.png')
+                    $(".preview-img").addClass('show')
+                    $(playBtn).css("visibility", "visible");
                 }
             }
             time = parseInt(this.currentTime)
