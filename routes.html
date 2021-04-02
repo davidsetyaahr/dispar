@@ -32,13 +32,23 @@
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <div class="video-container">
-                        <div class="preview-img">
-                            <img src="" class="img-fluid" alt="">
+                        <div class="rute-menu">
+                            <span class="fa fa-route toggle-route"></span>
+                            <ul class="rute-list">
+                            </ul>
                         </div>
-                        <video style="width:100%" autoplay>
-                            <source src="" type="video/mp4">
+                        <div class="preview-img">
+                            <a href="" target="_blank" class="to-destination">
+                                <img src="" class="img-fluid" alt="">
+                            </a>
+                            <a href="" target="_blank" data-destination=""
+                                class="download-kmz btn btn-green btn-sm mt-1"><span class="fa fa-download"></span>
+                                Download
+                                Rute</a>
+                        </div>
+                        <video style="width:100%" controls autoplay>
                         </video>
-                        <span class="fa fa-play-circle" style="visibility: hidden;"></span>
+                        <span class="fa fa-play-circle icon-play-video" style="visibility: hidden;"></span>
                     </div>
                 </div>
             </div>
@@ -78,27 +88,9 @@
             <div class="row justify-content-center">
                 <div class="col-md-11">
                     <div class="owl-routes owl-carousel">
-                        <div class="item mx-2">
-                            <h3>Rute 1</h3>
-                            <div class="layer">
-                                <video src="assets/video/route.mp4" width="100%">
-                                </video>
-                                <div class="icon-play">
-                                    <span class="fa fa-play"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item mx-2">
-                            <h3>Rute 2</h3>
-                            <div class="layer">
-                                <video src="assets/video/route.mp4" width="100%">
-                                </video>
-                                <div class="icon-play">
-                                    <span class="fa fa-play"></span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                    <a href="search.html" class="float-right mr-1 mt-3 btn btn-green py-3 px-5 font-weight-bold">NEXT /
+                        SKIP</a>
                 </div>
             </div>
         </div>
@@ -123,20 +115,54 @@
     <script src="assets/js/destinations.js"></script>
 
     <script>
+        $.each(routes, function (i, data) {
+            $(".owl-routes").append(`<div class="item mx-2" data-index="${i}">
+                            <h3>${data.name}</h3>
+                            <div class="layer">
+                                <video src="assets/video/${data.video}" width="100%">
+                                </video>
+                                <div class="icon-play">
+                                    <span class="fa fa-play"></span>
+                                </div>
+                            </div>
+                        </div>`)
+
+        })
         $(".owl-routes").owlCarousel({
             items: 2,
         });
+        $(".toggle-route").click(function () {
+            $(".rute-menu").toggleClass('show')
+        })
         var plainVideo = $(".video-popup video").get(0);
-        var playBtn = ".video-container span";
+        var playBtn = ".video-container .icon-play-video";
+        var videoActive;
         $(".icon-play").click(function () {
+            videoActive = $(this).closest('.item').data('index')
             $(".video-popup").addClass("active")
             var src = $(this).closest('.layer').find('video').attr('src')
             $(".video-popup video").attr("src", src)
+            $.each(routes[videoActive].route, function (i, data) {
+                var destinationName = destinations[data.destination].name
+                $(".rute-list").append(`<li><a href="#" data-jump="${data.start}">${destinationName}</a></li>`)
+            })
+            $(".rute-list a").click(function (e) {
+                e.preventDefault()
+                var jump = $(this).attr("data-jump")
+                plainVideo.currentTime = jump
+                plainVideo.play()
+                $(playBtn).css("visibility", "hidden");
+            })
         })
+
+
         $(".video-popup .close").click(function () {
             $(".video-popup").removeClass("active")
             $(playBtn).css("visibility", "hidden");
             plainVideo.pause()
+            $(".rute-list li").remove()
+            $(".rute-menu").removeClass('open')
+            $(".rute-menu").removeClass('show')
         })
 
         $(playBtn).click(function () {
@@ -144,56 +170,63 @@
             $(".preview-img img").attr('src', '')
             $(".preview-img").removeClass('show')
             plainVideo.play()
+            $(".rute-menu").removeClass('open')
+            $(".rute-menu").removeClass('show')
         })
         plainVideo.addEventListener("click", function () {
             if ($(playBtn).css("visibility") == "visible") {
                 $(".preview-img img").attr('src', '')
                 $(".preview-img").removeClass('show')
-                plainVideo.play();
+                // plainVideo.play();
                 $(playBtn).css("visibility", "hidden");
+                $(".rute-menu").removeClass('open')
+                $(".rute-menu").removeClass('show')
             }
             else {
-                plainVideo.pause();
+                // plainVideo.pause();
                 $(playBtn).css("visibility", "visible");
+                $(".rute-menu").addClass('open')
             }
         })
         var time = 0
+        var getIndex = -1
         plainVideo.addEventListener("timeupdate", function () {
             var currentTime = parseInt(this.currentTime);
             if (currentTime != time) {
-                if (currentTime == 93) {
-                    this.pause()
-                    $(".preview-img img").attr('src', 'assets/img/info-rute/solor.png')
+                $.each(routes[videoActive].route, function (i, data) {
+                    if (currentTime >= data.start && currentTime <= data.end) {
+                        getIndex = i
+                        $(".rute-list a").removeClass('active')
+                        $(".rute-list a[data-jump='" + data.start + "']").addClass('active')
+                        return false
+                    }
+                    else {
+                        getIndex = -1
+                    }
+                })
+                if (getIndex != -1) {
+                    $(".preview-img img").attr('src', 'assets/img/info-rute/' + destinations[routes[videoActive].route[getIndex].destination].ruteImg)
                     $(".preview-img").addClass('show')
-                    $(playBtn).css("visibility", "visible");
+                    var link = routes[videoActive].route[getIndex].destination + 1
+                    $(".preview-img .to-destination").attr('href', 'details.html?destination=' + link)
+                    $(".preview-img .download-kmz").attr('data-destination', routes[videoActive].route[getIndex].destination)
                 }
-                else if (currentTime == 177) {
-                    this.pause()
-                    $(".preview-img img").attr('src', 'assets/img/info-rute/kawah-ijen.png')
-                    $(".preview-img").addClass('show')
-                    $(playBtn).css("visibility", "visible");
-                }
-                else if (currentTime == 196) {
-                    this.pause()
-                    $(".preview-img img").attr('src', 'assets/img/info-rute/kawah-wurung.png')
-                    $(".preview-img").addClass('show')
-                    $(playBtn).css("visibility", "visible");
-                }
-                else if (currentTime == 230) {
-                    this.pause()
-                    $(".preview-img img").attr('src', 'assets/img/info-rute/blawan.png')
-                    $(".preview-img").addClass('show')
-                    $(playBtn).css("visibility", "visible");
-                }
-                else if (currentTime == 268) {
-                    this.pause()
-                    $(".preview-img img").attr('src', 'assets/img/info-rute/maskuning.png')
-                    $(".preview-img").addClass('show')
-                    $(playBtn).css("visibility", "visible");
+                else {
+                    $(".preview-img").removeClass('show')
                 }
             }
             time = parseInt(this.currentTime)
         });
+
+        $(".preview-img .download-kmz").click(function (e) {
+            e.preventDefault()
+            var download = []
+            $.each(destinations[routes[videoActive].route[getIndex].destination].rute, function (i, data) {
+                download[i] = [data, "assets/rute/" + data]
+            })
+            downloadAll(download);
+        })
+
 
         AOS.init()
     </script>

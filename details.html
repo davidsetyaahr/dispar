@@ -25,6 +25,16 @@
 </head>
 
 <body>
+    <div class="img-popup">
+        <span class="fa fa-times close"></span>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <img src="assets/img/destinations/coffee-plantation/1.JPG" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-light nav-top fixed-top">
         <div class="container custom">
             <a class="navbar-brand" href="#">
@@ -54,6 +64,7 @@
             </div>
         </div>
     </nav>
+
     <section class="full-bg" id="destination">
         <div class="fixed-left">
             <div class="content">
@@ -65,8 +76,9 @@
             <div class="info-destination mt-5 py-5 px-5" data-aos="fade-left" data-aos-duration="2000">
                 <h1 class="color-white" id="title"></h1>
                 <p class="color-white font-weight-normal" id="description"></p>
-                <div class="row row-img">
+                <div class="row-img  owl-carousel owl-theme">
                 </div>
+
                 <div class="row align-items-end mt-4">
                     <div class="col-auto">
                         <div class="facilities">
@@ -86,6 +98,7 @@
             </div>
         </div>
     </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
@@ -122,19 +135,13 @@
             })
             $("video").attr("autoplay", false)
             $.each(destinations[id].img, function (i, data) {
-                $(".row-img").append(`<div class="col-md-4">
+                $(".row-img").append(`<div class="item view-detail" data-img="${data}">
                         <div class="img-destination">
-                            <img src="assets/img/destinations/${data}" class="img-fluid" alt="" srcset="">
+                            <img src="assets/img/destinations/${data}" alt="" srcset="">
                         </div>
                     </div>`)
 
             })
-            VanillaTilt.init(document.querySelectorAll(".img-destination"), {
-                glare: true,
-                "max-glare": "0.5",
-                speed: 400,
-                scale: 1.05
-            });
             $.each(destinations[id].facilities, function (i, data) {
                 $(".icon-list").append(`<div class="icon" data-toggle="tooltip" title="${data.title}">
                     <span class="${data.icon}"></span>
@@ -144,15 +151,29 @@
 
             $("#title").html(destinations[id].name)
             $("#description").html(destinations[id].description)
-            $("#web360").attr("href", "360/" + destinations[id].web360)
-            //            $("#rute").attr("href", "assets/rute/" + destinations[id].rute)
-            $("#rute").click(function (e) {
-                e.preventDefault()
-                var file = $(this).attr('href');
-                $.each(destinations[id].rute, function (i, data) {
-                    window.open('assets/rute/' + data)
-                })
+            $('.row-img').owlCarousel({
+                loop: true,
+                margin: 10,
+                items: 3
             })
+            $("#web360").attr("href", "360/" + destinations[id].web360)
+
+            $('#rute').on('click', function (e) {
+                e.preventDefault()
+                var download = []
+                $.each(destinations[id].rute, function (i, data) {
+                    download[i] = [data, "assets/rute/" + data]
+                })
+                downloadAll(download);
+            });
+
+            // $("#rute").click(function (e) {
+            //     e.preventDefault()
+            //     var file = $(this).attr('href');
+            //     $.each(destinations[id].rute, function (i, data) {
+            //         window.open('assets/rute/' + data)
+            //     })
+            // })
             $(".owl-destination").owlCarousel({
                 items: 1,
                 dots: true,
@@ -181,6 +202,14 @@
             var dots = parseInt($(".owl-dots").width())
             $(".owl-nav button:first-child").css({"margin-right": dots / 2 + 18})
             $(".owl-nav button:last-child").css({"margin-left": dots / 2 + 18})
+            $(".view-detail").click(function () {
+                var src = $(this).data('img')
+                $(".img-popup img").attr('src', "assets/img/destinations/" + src)
+                $(".img-popup").addClass('show')
+            })
+            $(".close").click(function () {
+                $(".img-popup").removeClass('show')
+            })
         });
         AOS.init()
     </script>

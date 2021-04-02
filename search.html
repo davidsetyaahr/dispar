@@ -13,11 +13,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
         integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
+
     <link rel="stylesheet" href="assets/css/custom.css">
     <title>Document</title>
 </head>
 
 <body>
+    <style>
+        .owl-stage-outer {
+            overflow: initial !important;
+        }
+
+        .owl-dots {
+            transform: translateY(-100%);
+            -webkit-transform: translateY(-100%);
+            -o-transform: translateY(-100%);
+            -moz-transform: translateY(-100%);
+        }
+    </style>
     <nav class="navbar navbar-expand-lg navbar-light nav-top fixed-top">
         <div class="container custom">
             <a class="navbar-brand" href="#">
@@ -50,10 +70,20 @@
     <section class="full-bg" id="routes">
         <div class="container custom">
             <div class="row justify-content-center">
-                <div class="col-md-9" style="margin-top:12rem">
-                    <div class="map" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.5" data-tilt-speed="400"
-                        data-aos="fade-down" data-aos-duration="2000">
-                        <img src="assets/img/map/map.png" class="img-fluid" alt="">
+                <div class="col-md-9" style="margin-bottom : 10px;padding-top:10rem;overflow: hidden;">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="map" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.5"
+                                data-tilt-speed="400" data-aos="fade-down" data-aos-duration="2000">
+                                <img src="assets/img/map.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="map" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.5"
+                                data-tilt-speed="400" data-aos="fade-down" data-aos-duration="2000">
+                                <img src="assets/img/Peta.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,6 +101,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
         integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
 
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/destinations.js"></script>
@@ -80,6 +113,11 @@
             i++
             $(".map").prepend(`<a href="details.html?destination=${i}"><img src="assets/img/map/${data.pinImg}" class="img-pin" style="${data.position}" alt=""></a>`);
         })
+        $('.owl-carousel').owlCarousel({
+            margin: 20,
+            items: 1
+        })
+
         AOS.init()
     </script>
 </body>

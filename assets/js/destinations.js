@@ -42,7 +42,7 @@ const destinations = [
                         the soil color tumed to dark gray and fulfilled of nutrients.
 
                         Therefore, Bondowoso Arabica Coffee is the only specialty coffee product (Blue Mountain Coffee) in East Java that has received Certificate of Geographical Indication (Gi). According to the result of Ravour evaluation, the categorization of the coffee has a high valued acidity and exceptional quality with a strong typical aroma.`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["coffee-plantation/1.jpg","coffee-plantation/2.jpg","coffee-plantation/3.jpg","coffee-plantation/4.jpg","coffee-plantation/5.jpg"],
         "facilities" : [
             {
                 "icon" : "fas fa-mug-hot",
@@ -66,7 +66,8 @@ const destinations = [
             },
         ],
         "web360" : "kluncing/index.htm",
-        "rute" : []
+        "rute" : ["kluncing1.kml","kluncing2.kml","kluncing3.kml"],
+        "ruteImg" : "kluncing.png"
     },
     {
         "name" : "Rainbow Forest",
@@ -84,10 +85,11 @@ const destinations = [
                 Rainbow Forest is adjusted over the charactenstics of the specific one exotic tree that 1s known as Leda Wood (Eucalyptus Deglupta) which is spread in Maluku and Papua island. 
                 The attraction of colorful fogs gradation created by the oxidation process of the stem cambium with Oxygen that produces colors: green. yeliow, blue, orange. and brown. Eucalyptus Degiupta is an endemic plant which is naturally vulnerable that deals with decreasing population
                 numbers due to natural habitat overexploitation.`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["rainbow-forest/1.jpg","rainbow-forest/2.jpg","rainbow-forest/3.jpg","rainbow-forest/4.jpeg","rainbow-forest/5.jpeg","rainbow-forest/6.jpeg"],
         "facilities" : [],
         "web360" : "rainbow-forest/index.htm",
-        "rute" : ["rainbow-forest.kml"]
+        "rute" : ["rainbow-forest.kml"],
+        "ruteImg" : "rainbow-forest.png"
     },
     {
         "name" : "Maskuning Kulon",
@@ -106,7 +108,7 @@ const destinations = [
 
         The site is constructed such a burial complex that is made of large stones above the iegs which aim to protect
         the corpse from wild animals or to be stolen, because there are many jewelry and other valuable thins as the provision to get through the ancestral realm.`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["maskuning-kulon/1.jpeg","maskuning-kulon/2.jpeg","maskuning-kulon/3.jpeg"],
         "facilities" : [
             {
                 "icon" : "fas fa-parking",
@@ -114,18 +116,38 @@ const destinations = [
             },
         ],
         "web360" : "maskuning-kulon/index.htm",
-        "rute" : ["maskuning1.kml","maskuning2.kml"]
+        "rute" : ["maskuning1.kml","maskuning2.kml"],
+        "ruteImg" : "maskuning.png"
     },
     {
         "name" : "So'on Solor Stone Park",
         "pinImg" : "4.png",
         "position" : "left:25%;top:-10%",
         "video" : ["solor/solor.mp4"],
-        "description" : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "description" : `114°04'37.77"E ; 7°51'30.01"S
+
+            Geosite Taman Batu So’on Solor terletak di Desa Solor, Kecamatan Cermee,
+            Kabupaten Bondowoso. 
+            Geosite ini tersusun oleh satuan batuan Gunung Api ljen Purba yang berumur Kuarter Pleistosen, diantaranya; Breksi Gunung Api, Breksi Batu Apung, Tuff, dan Lava. 
+            Berdasarkan batuan yang tersusun oleh material piroklastik, polimiktik, fragmen-fragmen andesit, basalt, dan batu apung, berukuran hingga 60 cm, dengan bentuk menyudut - membulat tanggung, terpiiah buruk, dan kompak sedang.
+            Morfologi Taman Batu Soon Solor terbentuk karena kontrol Eksogen dan Endogen
+            yang diakibatkan oleh faktor erosi, struktur kekar atau rekahan, dan aspek tekstur batuan
+            sehingga menghasilkan bentuk batuan bersusun yang lebih dikenal dengan sebutan Batu So'on
+
+            <div class="mt-3 font-weight-light">
+                So‘on Solor Stone Park Geosite is located in Sofor Village, Cermee Subdistrict.
+                Bondowoso Regency. The Geosite is primarily arranged by tien Ancient Volcano Lithologic
+                Consituents which identifable during the Quatemary Pleistocene period, for example
+
+                Volcano Breccia, Pumice Breccia, Tuff, and Lava. Based on recognizable composition of stones,
+                they are pyrociastic, polymictic, andesite, basalt and pumice fragments, the size up to 60 cm,
+                with vary in shape from angular - rounded. poorly sorted, and medium compact.
+
+                The morphological of So’on Solor Stone Park was commonly occured of both exogenous
+
+                and endogenous processes affected by erosion factors, stocky structures or fractures,
+                and texture aspect. so that stratified stone are mostly known as So'on Stone.</div>`,
+        "img" : ["solor/1.jpg","solor/2.jpg","solor/3.jpg","solor/4.jpg","solor/5.jpeg"],
         "facilities" : [
             {
                 "icon" : "fas fa-ticket-alt",
@@ -161,7 +183,8 @@ const destinations = [
             },
         ],
         "web360" : "solor/index.htm",
-        "rute" : ["solor.kml"]
+        "rute" : ["solor.kml"],
+        "ruteImg" : "solor.png",
     },
     {
         "name" : "Butha Cave Structure Of Cermee",
@@ -172,7 +195,7 @@ const destinations = [
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["butha/1.jpg","butha/2.jpg"],
         "facilities" : [
             {
                 "icon" : "fas fa-parking",
@@ -192,7 +215,8 @@ const destinations = [
             },
         ],
         "web360" : "butha/index.htm",
-        "rute" : ["butha.kml"]
+        "rute" : ["butha.kml"],
+        "ruteImg" : "butha.png"
     },
     {
         "name" : "Butha Cave Structure Of Sumber Canting",
@@ -203,10 +227,11 @@ const destinations = [
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["butha-canting/1.jpg","butha-canting/2.jpg"],
         "facilities" : [],
         "web360" : "butha-canting/index.htm",
-        "rute" : ["butha-canting.kml"]
+        "rute" : ["butha-canting.kml"],
+        "ruteImg" : "butha-canting.png"
     },
     {
         "name" : "Kalipait Acidic Stream",
@@ -217,7 +242,7 @@ const destinations = [
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["kalipait/1.jpg","kalipait/2.jpg","kalipait/3.jpg"],
         "facilities" : [
             {
                 "icon" : "fas fa-parking",
@@ -237,7 +262,8 @@ const destinations = [
             },
         ],
         "web360" : "kalipait/index.htm",
-        "rute" : ["kalipait.kml"]
+        "rute" : ["kalipait.kml"],
+        "ruteImg" : "kalipait.png"
     },
     {
         "name" : "Kawah Wurung Tour",
@@ -261,7 +287,7 @@ const destinations = [
 
             The Geosite considers a geological significance of volcanic morphology ‘Teletubbies' intra caldera.
             The diversity of Wurung Crater Geosite area is occured from the volcanism material sources of Intra Caldera Volcano and Caldera Ring, and affected as well through Petrographic Mineral of materials construction.</div>`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["kawah-wurung/1.jpg","kawah-wurung/2.jpg","kawah-wurung/3.jpg","kawah-wurung/4.jpg"],
         "facilities" : [
             {
                 "icon" : "fas fa-ticket-alt",
@@ -305,7 +331,8 @@ const destinations = [
             },
         ],
         "web360" : "kawah-wurung/index.htm",
-        "rute" : ["kawah-wurung.kml"]
+        "rute" : ["kawah-wurung.kml"],
+        "ruteImg" : "kawah-wurung.png"
     },
     {
         "name" : "Gentongan Waterfall",
@@ -329,10 +356,11 @@ const destinations = [
 
             The society alongside the Geosite named ‘Stone of Lapis Cake’ of Gentongan Waterfall which aims to make it easier to remember.
             </div>`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["gentongan/1.jpg","gentongan/2.jpg","gentongan/3.jpg","gentongan/4.jpg"],
         "facilities" : [],
         "web360" : "gentongan/index.htm",
-        "rute" : ["gentongan.kml"]
+        "rute" : ["gentongan.kml"],
+        "ruteImg" : "gentongan.png"
     },
     {
         "name" : "Blawan Lava",
@@ -354,7 +382,7 @@ const destinations = [
 
             Lava matenals characterization around Blawan Lava Geosife is vesicular with fractures on the surface through flash frozen process, So that it forms ragged bumby relief which makes water flow rippled down and looks like Niagara Mini or Little Niagara Waterfall.
             </div>`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["blawan-lava/1.jpg","blawan-lava/2.jpg","blawan-lava/3.jpeg","blawan-lava/4.jpg"],
         "facilities" : [
             {
                 "icon" : "fas fa-mug-hot",
@@ -390,7 +418,8 @@ const destinations = [
             },
         ],
         "web360" : "blawan-lava/index.htm",
-        "rute" : ["blawan-lava.kml"]
+        "rute" : ["blawan-lava.kml"],
+        "ruteImg" : "blawan-lava.png"
     },
     {
         "name" : "Blawan Hot Springs Complex",
@@ -413,7 +442,7 @@ const destinations = [
 
             The water is requiring in neutral with pH = 6.4. The hot springs is arranged by fault structures manifested as Blawan Waterfall on northern part of jen Caldera. Geothermal processes in the Geosite area are characterized by rising of hot springs and Terrain Travertine or Sintered Silica deposition. The matetial of deposition can be found in Damar Wulan Lake with warm temperature. There is also a resort of some pools with varying temperatures wilh the beneficial for healthy therapy and relaxation.
             </div>`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["blawan-hot/1.jpg","blawan-hot/2.jpg","blawan-hot/3.jpg","blawan-hot/4.jpg"],
         "facilities" : [
             {
                 "icon" : "fas fa-mug-hot",
@@ -445,7 +474,8 @@ const destinations = [
             },
         ],
         "web360" : "blawan-hot/index.htm",
-        "rute" : ["blawan-hot.kml"]
+        "rute" : ["blawan-hot.kml"],
+        "ruteImg" : "blawan-hot.png"
     },
     {
         "name" : "Ijen Crater",
@@ -474,7 +504,7 @@ const destinations = [
             Uniquely, the heat cannot burn any wood. but it is possible fo melt iron (Geological Department, 2014). The Blue Fire considers to appear after midnight dark during the early time
             before the sun rises in the morning.
             </div>`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["ijen/1.jpg","ijen/2.jpg","ijen/3.jpg","ijen/4.jpg"],
         "facilities" : [
             {
                 "icon" : "fas fa-mug-hot",
@@ -510,7 +540,8 @@ const destinations = [
             },
         ],
         "web360" : "ijen/index.htm",
-        "rute" : ["ijen.kml"]
+        "rute" : ["ijen.kml"],
+        "ruteImg" : "ijen.png"
     },
     {
         "name" : "Plalangan Lava Flow",
@@ -534,7 +565,7 @@ const destinations = [
 
             By the macroscopic superficial, the lava flow has black color, vesicular structures, with AA-textured obtained from Mt. Anyar (Jabal Kirmit) eruption material which shows the Lava dominant character of Basaltic and Andesite Basaltic, known as Black Lava.
             </div>`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["plalangan-lava/1.jpg","plalangan-lava/2.jpg","plalangan-lava/3.jpg","plalangan-lava/4.jpg"],
         "facilities" : [
             {
                 "icon" : "fa fa-toilet",
@@ -554,7 +585,8 @@ const destinations = [
             },
         ],
         "web360" : "plalangan-lava/index.htm",
-        "rute" : ["plalangan-lava.kml"]
+        "rute" : ["plalangan-lava.kml"],
+        "ruteImg" : "plalangan-lava.png"
     },
     {
         "name" : "Ijen Megasari Caldera Cliff",
@@ -590,7 +622,7 @@ const destinations = [
             From southwest direction. there are Mt. Suket, Mt. Cemara, Mt. Mlaten,
             and it remains one active volcano outside the Ancient Ijen Caldera, known as Mt. Raung.
             </div>`,
-        "img" : ["1.jpg","2.jpg","3.jpg"],
+        "img" : ["ijen-megasari/1.jpg","ijen-megasari/2.jpg","ijen-megasari/3.jpg","ijen-megasari/4.jpg"],
         "facilities" : [
             {
                 "icon" : "fas fa-binoculars",
@@ -610,7 +642,72 @@ const destinations = [
             },
         ],
         "web360" : "ijen-megasari/index.htm",
-        "rute" : ["ijen-megasari.kml"]
+        "rute" : ["ijen-megasari.kmz"],
+        "ruteImg" : "ijen-megasari.png"
     },
 
+]
+const routes = [
+    {
+        "name" : "Rute 1",
+        "video" : "route.mp4",
+        "route" : [
+            {
+                "destination" : 3,
+                "start" : 93,
+                "end" : 105
+            },
+            {
+                "destination" : 11,
+                "start" : 177,
+                "end" : 180
+            },
+            {
+                "destination" : 7,
+                "start" : 196,
+                "end" : 201
+            },
+            {
+                "destination" : 9,
+                "start" : 230,
+                "end" : 240
+            },
+            {
+                "destination" : 2,
+                "start" : 268,
+                "end" : 269
+            },
+        ]
+    },
+    {
+        "name" : "Rute 2",
+        "video" : "route2.mp4",
+        "route" : [
+            {
+                "destination" : 7,
+                "start" : 44,
+                "end" : 55
+            },
+            {
+                "destination" : 10,
+                "start" : 70,
+                "end" : 81
+            },
+            {
+                "destination" : 11,
+                "start" : 96,
+                "end" : 110
+            },
+            {
+                "destination" : 3,
+                "start" : 183,
+                "end" : 192
+            },
+            {
+                "destination" : 2,
+                "start" : 231,
+                "end" : 238
+            },
+        ]
+    },
 ]
