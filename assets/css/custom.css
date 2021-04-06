@@ -233,6 +233,16 @@ html {
   -moz-transition: all.5s ease;
   -o-transition: all.5s ease;
 }
+.map .img-pin.two-d{
+  width:5% !important;  
+}
+.map .img-pin.two-d:hover{
+  transform: scale(1.6);
+  -webkit-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  -o-transform: scale(1.6);
+  z-index: 10;
+}
 .map .img-pin:hover{
     transform: scale(1.1);
   -webkit-transform: scale(1.1);

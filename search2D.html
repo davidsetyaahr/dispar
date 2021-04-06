@@ -59,15 +59,14 @@
         <div class="container custom">
             <div class="row justify-content-center">
                 <div class="col-md-12 text-center" style="margin-top: 7rem;">
-                    <a href="" class="mr-1 mt-3 btn btn-green py-3 px-5 font-weight-bold">3D
+                    <a href="search.html" class="mr-1 mt-3 btn btn-outline-green py-3 px-5 font-weight-bold">Go To 3D
                         Version</a>
-                    <a href="search2D.html" class="mr-1 mt-3 btn btn-outline-green py-3 px-5 font-weight-bold">Go To 2D
+                    <a href="" class="mr-1 mt-3 btn btn-green py-3 px-5 font-weight-bold">2D
                         Version</a>
                 </div>
                 <div class="col-md-9 mb-5" style="margin-top:8rem;">
-                    <div class="map" data-tilt data-tilt-glare="true" data-tilt-max-glare="0.5" data-tilt-speed="400"
-                        data-aos="fade-down" data-aos-duration="2000">
-                        <img src="assets/img/map.png" class="img-fluid" alt="">
+                    <div class="map">
+                        <img src="assets/img/peta.png" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
@@ -95,7 +94,7 @@
     <script>
         $.each(destinations, function (i, data) {
             i++
-            $(".map").prepend(`<a href="details.html?destination=${i}"><img src="assets/img/map/${data.pinImg}" class="img-pin" style="${data.position}" alt=""></a>`);
+            $(".map").prepend(`<a href="details.html?destination=${i}"><img src="assets/img/info-rute/${data.pinImg}" class="img-pin two-d" style="${data.position2d}" alt=""></a>`);
         })
 
         AOS.init()

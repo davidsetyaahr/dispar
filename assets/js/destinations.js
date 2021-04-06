@@ -1,24 +1,9 @@
 const destinations = [
-/*     {
-        "name" : "Kawah Ijen",
-        "banner" : "Kawah-Ijen.png",
-        "position" : "left:40%;top:0%;transform: translateY(-50%);-moz-transform: translateY(-50%);-webkit-transform: translateY(-50%);",
-    },
-    {
-        "name" : "Megasari",
-        "banner" : "Megasari.png",
-        "position" : "left:86%;top:10%",
-    },
-    {
-        "name" : "Arak Arak",
-        "banner" : "Arak-Arak.png",
-        "position" : "left:65%;top:20%",
-    }
- */
     {
         "name" : "Coffee Plantation",
         "pinImg" : "1.png",
         "position" : "left:65%;top:20%",
+        "position2d" : "left:57%;top:51%",
         "video" : ["coffee-plantation/Coffee Plantation_KM.mp4"],
         "description" : `Terletak di kawasan perkebunan PTPN XII dan perkebunan rakyat
                         di daerah pegunungan ljen-Raung di Kecamatan ljen dan Sumberwringin.
@@ -67,12 +52,12 @@ const destinations = [
         ],
         "web360" : "kluncing/index.htm",
         "rute" : ["kluncing1.kml","kluncing2.kml","kluncing3.kml"],
-        "ruteImg" : "kluncing.png"
     },
     {
         "name" : "Rainbow Forest",
         "pinImg" : "2.png",
         "position" : "left:50%;top:20%",
+        "position2d" : "left:54%;top:61%",
         "video" : ["rainbow-forest/Rainbow forest.mp4"],
         "description" : `Rainbow Forest Biosite
                 114°0'9.77"E ; 7°59'56.58"'S
@@ -89,12 +74,12 @@ const destinations = [
         "facilities" : [],
         "web360" : "rainbow-forest/index.htm",
         "rute" : ["rainbow-forest.kml"],
-        "ruteImg" : "rainbow-forest.png"
     },
     {
         "name" : "Maskuning Kulon",
         "pinImg" : "3.png",
         "position" : "left:50%;top:-15%",
+        "position2d" : "left:36%;top:51%",
         "video" : ["maskuning-kulon/Maskuning Kulon Path.mp4"],
         "description" : `113°53'15"E ; 7°58'39.97"S
         Situs Megalltik Maskuning Kulon terfetak di Desa Maskuning Kulon, Kecamatan Pujer, Kabupaten Bondowoso.
@@ -117,12 +102,12 @@ const destinations = [
         ],
         "web360" : "maskuning-kulon/index.htm",
         "rute" : ["maskuning1.kml","maskuning2.kml"],
-        "ruteImg" : "maskuning.png"
     },
     {
         "name" : "So'on Solor Stone Park",
         "pinImg" : "4.png",
         "position" : "left:25%;top:-10%",
+        "position2d" : "left:62%;top:20%",
         "video" : ["solor/solor.mp4"],
         "description" : `114°04'37.77"E ; 7°51'30.01"S
 
@@ -184,12 +169,12 @@ const destinations = [
         ],
         "web360" : "solor/index.htm",
         "rute" : ["solor.kml"],
-        "ruteImg" : "solor.png",
     },
     {
         "name" : "Butha Cave Structure Of Cermee",
         "pinImg" : "5.png",
         "position" : "left:45%;top:-10%",
+        "position2d" : "left:60%;top:31%",
         "video" : ["butha/butha.mp4"],
         "description" : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
@@ -216,12 +201,12 @@ const destinations = [
         ],
         "web360" : "butha/index.htm",
         "rute" : ["butha.kml"],
-        "ruteImg" : "butha.png"
     },
     {
         "name" : "Butha Cave Structure Of Sumber Canting",
         "pinImg" : "6.png",
         "position" : "left:30%;top:-10%",
+        "position2d" : "left:55%;top:41%",
         "video" : ["butha-canting/butha-canting.mp4"],
         "description" : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
@@ -231,12 +216,12 @@ const destinations = [
         "facilities" : [],
         "web360" : "butha-canting/index.htm",
         "rute" : ["butha-canting.kml"],
-        "ruteImg" : "butha-canting.png"
     },
     {
         "name" : "Kalipait Acidic Stream",
         "pinImg" : "7.png",
         "position" : "left:60%;top:6%",
+        "position2d" : "left:83%;top:77%",
         "video" : ["kalipait/kalipait.mp4"],
         "description" : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi velit, consectetur necessitatibus amet deleniti dignissimos tempore laborum nesciunt molestiae? Perspiciatis, eius dicta tempore deserunt ad ratione animi magni officiis illum?
@@ -263,12 +248,12 @@ const destinations = [
         ],
         "web360" : "kalipait/index.htm",
         "rute" : ["kalipait.kml"],
-        "ruteImg" : "kalipait.png"
     },
     {
         "name" : "Kawah Wurung Tour",
         "pinImg" : "8.png",
         "position" : "left:40%;top:20%",
+        "position2d" : "left:77%;top:78%",
         "video" : ["kawah-wurung/kawah-wurung.mp4"],
         "description" : `114°09'54.03"E ; 8°04'02.08"S
             Geosite Kawah Wurung terletak di antara perbatasan Desa Jampit dan Desa Kalianyar,
@@ -332,12 +317,12 @@ const destinations = [
         ],
         "web360" : "kawah-wurung/index.htm",
         "rute" : ["kawah-wurung.kml"],
-        "ruteImg" : "kawah-wurung.png"
     },
     {
         "name" : "Gentongan Waterfall",
         "pinImg" : "9.png",
         "position" : "left:20%;top:5%",
+        "position2d" : "left:82%;top:67%",
         "video" : ["gentongan/gentongan.mp4"],
         "description" : `114°10'54.43"E ; 8°01'24.41"S
 
@@ -360,12 +345,12 @@ const destinations = [
         "facilities" : [],
         "web360" : "gentongan/index.htm",
         "rute" : ["gentongan.kml"],
-        "ruteImg" : "gentongan.png"
     },
     {
         "name" : "Blawan Lava",
         "pinImg" : "10.png",
         "position" : "left:25%;top:10%",
+        "position2d" : "left:83%;top:55%",
         "video" : ["blawan-lava/blawan-lava.mp4"],
         "description" : `114 ° 10'15.50'E ; 7 ° 59'22.99"S
 
@@ -419,12 +404,12 @@ const destinations = [
         ],
         "web360" : "blawan-lava/index.htm",
         "rute" : ["blawan-lava.kml"],
-        "ruteImg" : "blawan-lava.png"
     },
     {
         "name" : "Blawan Hot Springs Complex",
         "pinImg" : "11.png",
         "position" : "left:45%;top:10%",
+        "position2d" : "left:77%;top:55%",
         "video" : ["blawan-hot/blawan-hot.mp4"],
         "description" : `114°10'33.19""E ; 7°59'04.49"S
 
@@ -475,12 +460,12 @@ const destinations = [
         ],
         "web360" : "blawan-hot/index.htm",
         "rute" : ["blawan-hot.kml"],
-        "ruteImg" : "blawan-hot.png"
     },
     {
         "name" : "Ijen Crater",
         "pinImg" : "12.png",
         "position" : "left:32%;top:10%",
+        "position2d" : "left:90%;top:73%",
         "video" : ["ijen/ijen.mp4"],
         "description" : `114°14'25.53"E ; 8°3'35.64"S
             Geosite Kawah Ijen/ Blue Fire di antara dua Wilayah Administratif Kabupaten Bondowoso
@@ -541,12 +526,12 @@ const destinations = [
         ],
         "web360" : "ijen/index.htm",
         "rute" : ["ijen.kml"],
-        "ruteImg" : "ijen.png"
     },
     {
         "name" : "Plalangan Lava Flow",
         "pinImg" : "13.png",
         "position" : "left:12%;top:-10%",
+        "position2d" : "left:76%;top:65%",
         "video" : ["plalangan-lava/plalangan-lava.mp4"],
         "description" : `114 ° 09'8.25'E ; 8 ° 00'33.97"S
 
@@ -586,12 +571,12 @@ const destinations = [
         ],
         "web360" : "plalangan-lava/index.htm",
         "rute" : ["plalangan-lava.kml"],
-        "ruteImg" : "plalangan-lava.png"
     },
     {
         "name" : "Ijen Megasari Caldera Cliff",
         "pinImg" : "14.png",
         "position" : "left:45%;top:32%",
+        "position2d" : "left:70%;top:61%",
         "video" : ["ijen-megasari/ijen-megasari.mp4"],
         "description" : `114°07'15.42"E ; 8°00'08.12"S
 
@@ -643,7 +628,6 @@ const destinations = [
         ],
         "web360" : "ijen-megasari/index.htm",
         "rute" : ["ijen-megasari.kmz"],
-        "ruteImg" : "ijen-megasari.png"
     },
 
 ]
