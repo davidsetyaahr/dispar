@@ -376,6 +376,7 @@ html {
 }
 #destination .fixed-left{
   width : 40%;
+  position: relative;
 }
 #destination .fixed-left .content{
   width : 40%;
@@ -577,4 +578,11 @@ html {
   -webkit-transform: translateX(0%);
   -o-transform: translateX(0%);
   -moz-transform: translateX(0%);
+}
+.btn-details{
+  position: fixed;
+  bottom: 15px;
+  z-index: 1000;
+  width: 40%;
+  text-align: center;
 }
